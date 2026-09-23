@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности — Mail Monitor</title>
+    <style>
+        :root {
+            --accent: #3F51B5;
+            --text: #24292e;
+            --muted: #586069;
+            --border: #e1e4e8;
+            --bg: #ffffff;
+            --code-bg: #f6f8fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                         "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 12px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .revision {
+            display: inline-block;
+            font-size: 0.875rem;
+            color: var(--muted);
+            background: var(--code-bg);
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 40px 0 16px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin-top: 40px;
+            padding: 20px 24px;
+            background: var(--code-bg);
+            border-left: 4px solid var(--accent);
+            border-radius: 6px;
+        }
+
+        .contact p {
+            margin: 6px 0;
+        }
+
+        footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 16px 64px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Политика конфиденциальности<br>Mail Monitor</h1>
+            <span class="revision">Дата редакции: 23.09.2026</span>
+        </header>
+
+        <section>
+            <h2>1. Назначение приложения</h2>
+            <p>
+                Mail Monitor предназначено для подключения пользователя к указанному им
+                XIMSS-почтовому серверу, мониторинга непрочитанных сообщений и показа
+                локальных уведомлений.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Какие данные используются</h2>
+            <p>Пользователь может указать:</p>
+            <ul>
+                <li>адрес XIMSS-сервера;</li>
+                <li>логин;</li>
+                <li>пароль.</li>
+            </ul>
+            <p>
+                Для работы приложения также локально сохраняются служебные сведения:
+                текущий статус мониторинга, последнее значение количества непрочитанных
+                сообщений и UID писем, для которых уже было показано уведомление.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Где хранятся данные</h2>
+            <p>
+                Адрес сервера и логин сохраняются локально в хранилище приложения Android.
+            </p>
+            <p>
+                Пароль сохраняется локально в защищённом хранилище Android Keystore
+                через зашифрованное хранилище приложения.
+            </p>
+            <p>
+                Приложение не передаёт введённый пароль разработчику.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Куда передаются данные</h2>
+            <p>
+                Логин и пароль передаются только на XIMSS-сервер, который указан
+                пользователем, для авторизации и работы с почтовым ящиком.
+            </p>
+            <p>
+                Приложение также обращается к публичному файлу активации GitHub
+                для проверки доступности мониторинга.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Уведомления</h2>
+            <p>
+                Приложение может создавать локальные уведомления о новых непрочитанных
+                письмах и об изменении количества непрочитанных сообщений.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Аналитика и реклама</h2>
+            <p>
+                В текущей версии сторонние рекламные и аналитические SDK не используются.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Передача третьим лицам</h2>
+            <p>
+                Разработчик не передаёт логин и пароль третьим лицам. Работа с почтовым
+                ящиком выполняется непосредственно с сервером, указанным пользователем.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Изменения политики</h2>
+            <p>
+                Политика может обновляться при изменении функциональности приложения.
+                Дата редакции указывается в начале документа.
+            </p>
+        </section>
+
+        <section>
+            <h2>9. Контакты</h2>
+            <div class="contact">
+                <p><strong>Разработчик:</strong> k1f1r1k</p>
+                <p><strong>Email:</strong> <a href="mailto:DEVELOPER_EMAIL">DEVELOPER_EMAIL</a></p>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 Mail Monitor. Все права защищены.
+        </footer>
+    </div>
+</body>
+</html>
